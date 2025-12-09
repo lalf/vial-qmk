@@ -1,4 +1,5 @@
 // Copyright 2022-2023 Nick Brassel (@tzarc)
+// Copyright 2025 Lalf/GroupTRON (lalf@grouptron.org)
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <string.h>
@@ -34,6 +35,9 @@ static bool encoder_handle_queue(void) {
     while (encoder_dequeue_event(&index, &clockwise)) {
 #ifdef ENCODER_MAP_ENABLE
 
+        if (encoder_hook_user(index, clockwise) == false) {
+            return true;
+        }
         // The delays below cater for Windows and its wonderful requirements.
         action_exec(clockwise ? MAKE_ENCODER_CW_EVENT(index, true) : MAKE_ENCODER_CCW_EVENT(index, true));
 #    if ENCODER_MAP_KEY_DELAY > 0
@@ -176,4 +180,8 @@ __attribute__((weak)) bool encoder_update_kb(uint8_t index, bool clockwise) {
     }
 #endif // ENCODER_TESTS
     return res;
+}
+
+__attribute__((weak)) bool encoder_hook_user(uint8_t index, bool clockwise) {
+    return true;
 }
