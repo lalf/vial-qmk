@@ -1,0 +1,108 @@
+{
+    "lighting": "qmk_rgblight",
+    "matrix": {
+        "rows": 6,
+        "cols": 6
+    },
+    "layouts": {
+        "keymap":
+        [
+          [
+            "0,0",
+            {"x":2},
+            "1,1",
+            "2,2",
+            {"x":4},
+            "0,1",
+            "0,2",
+            "0,3",
+            "0,4",
+            "0,5"
+          ],
+          [
+            {"x":5.5,"y":-0.5},
+            "0,0\n\n\n\n\n\n\n\n\ne",
+            "0,1\n\n\n\n\n\n\n\n\ne"
+          ],
+          [
+            {"y":-0.5},
+            "3,3",
+            {"x":2},
+            "4,4",
+            "5,5",
+            {"x":5},
+            "1,2",
+            "1,3",
+            "1,4",
+            "1,5"
+          ],
+          [
+            {"x":11},
+            "2,3",
+            "2,4",
+            "2,5"
+          ],
+          [
+            {"x":12},
+            "3,4",
+            "3,5"
+          ],
+          [
+            {"x":13},
+            "4,5"
+          ]
+        ]
+    },
+    "customKeycodes": [
+        {
+          "name": "KC_TB_CHGDPI",
+          "title": "Change the trackball DPI",
+          "shortName": "Chg\nDPI"
+        },
+        {
+          "name": "KC_TB_SHOWDPI",
+          "title": "Show the trackball DPI",
+          "shortName": "Show\nDPI"
+        },
+        {
+          "name": "KC_TB_HALFDPI",
+          "title": "Temporarily halve the trackball's DPI",
+          "shortName": "Half\nDPI"
+        },
+        {
+          "name": "KC_TB_DOUBLEDPI",
+          "title": "Temporarily double the trackball's DPI",
+          "shortName": "Dbl\nDPI"
+        },
+        {
+          "name": "KC_TB_SETDPI300",
+          "title": "Set the trackball to 300 DPI",
+          "shortName": "DPI\n300"
+        },
+        {
+          "name": "KC_TB_SETDPI500",
+          "title": "Set the trackball to 500 DPI",
+          "shortName": "DPI\n500"
+        },
+        {
+          "name": "KC_TB_SETDPI1000",
+          "title": "Set the trackball to 1000 DPI",
+          "shortName": "DPI\n1000"
+        },
+        {
+          "name": "KC_TB_SETDPI150D",
+          "title": "Set the trackball to 1500 DPI",
+          "shortName": "DPI\n1500"
+        },
+        {
+          "name": "KC_TB_SETDPI3000",
+          "title": "Set the trackball to 3000 DPI",
+          "shortName": "DPI\n3000"
+        },
+        {
+          "name": "KC_TB_CHGANGLE",
+          "title": "Change TrackBallBar Slim Angle(0/90/180/270)",
+          "shortName": "Chg\nAngle"
+        }
+    ]
+}

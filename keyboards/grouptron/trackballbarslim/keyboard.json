@@ -1,0 +1,60 @@
+{
+    "keyboard_name": "TrackBallBar Slim",
+    "manufacturer": "GroupTRON",
+    "maintainer": "Lalf",
+    "url": "https://github.com/lalf/trackballbar-slim",
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "usb": {
+        "device_version": "1.0.0",
+        "vid": "0xFEED",
+        "pid": "0x4702",
+        "polling_interval": 1
+    },
+    "features": {
+        "bootmagic": true,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": false,
+        "rgblight": true,
+        "encoder": true,
+        "encoder_map": true,
+        "console": false
+    },
+    "diode_direction": "COL2ROW",
+    "matrix_pins": {
+        "cols": ["GP9",  "GP1",  "GP2", "NO_PIN", "NO_PIN","NO_PIN"],
+        "rows": ["GP11", "GP10", "GP3", "GP4",    "NO_PIN","NO_PIN"]
+    }
+    "rgblight": {
+        "led_count": 1,
+        "layers": {
+            "enabled": true,
+            "max": 8
+        }
+    },
+    "ws2812": {
+        "driver": "vendor",
+        "pin": "GP0"
+    },
+    "encoder": {
+        "rotary": [
+            { "pin_a": "GP5", "pin_b": "GP6", "resolution": 2 }
+        ]
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"matrix":[0,0], "x":0, "y":0,},
+                {"matrix":[1,1], "x":3, "y":0 },
+                {"matrix":[2,2], "x":4, "y":0 },
+                {"matrix":[3,3], "x":0, "y":1 },
+                {"matrix":[4,4], "x":3, "y":1 },
+                {"matrix":[5,5], "x":4, "y":1 }
+            ]
+        }
+    },
+    "dynamic_keymap": {
+        "layer_count": 8
+    }
+}
